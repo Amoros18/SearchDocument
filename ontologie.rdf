@@ -1,0 +1,556 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl/"
+     xml:base="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:DocumentsNumeriques="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#aPourClip -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#aPourClip">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#musiqueCorrespondante"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Musique"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#ClipMusical"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#aPourFormat -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#aPourFormat">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Document"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#FormatFichier"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#aPourGenre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#aPourGenre">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Document"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Genre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#aPourLangue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#aPourLangue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Document"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Langue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#aPourPaysDOrigine -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#aPourPaysDOrigine">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Document"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#PaysOriginaire"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#aPourSujet -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#aPourSujet">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Document"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Sujet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#creePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#creePar">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Document"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Personne"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#musiqueCorrespondante -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#musiqueCorrespondante">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#ClipMusical"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Musique"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#aPourCodeISO693 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#aPourCodeISO693">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Langue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#aPourNom -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#aPourNom">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Document"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Langue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#aPourNomDArtiste -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#aPourNomDArtiste">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#aPourNomDeNaissance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#aPourNomDeNaissance">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#aPourTheme -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#aPourTheme">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Document"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#aPourTitre -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#aPourTitre">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#audio"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Musique"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#audio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#audio"/>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#cheminDAccess -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#cheminDAccess">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Document"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#dateNaissance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#dateNaissance">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#dimension -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#dimension">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#image"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Image"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#dure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#dure">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#formatFichier -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#formatFichier">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#FormatFichier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#image -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#image"/>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#nationnalite -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#nationnalite">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Personne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#nombreDePage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#nombreDePage">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#texte"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Texte"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#publieLe -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#publieLe">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Document"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#qualiteAudio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#qualiteAudio">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#video"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Video"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#resolution -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#resolution">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#video"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Video"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#sous-titreDisponible -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#sous-titreDisponible">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#video"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Video"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#texte -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#texte"/>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#typeFichier -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#typeFichier">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#FormatFichier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#video -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#video"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Article -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Article">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Texte"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Audio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Audio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Document"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Image"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Texte"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Video"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#ClipMusical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#ClipMusical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Video"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Document -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Document"/>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Documentaire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Documentaire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Video"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Film -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Film">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Video"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#FormatFichier -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#FormatFichier"/>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Genre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Genre"/>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Illustration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Illustration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Image"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Image -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Image">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Document"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Texte"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Video"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Langue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Langue"/>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Livre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Livre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Texte"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#LivreAudio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#LivreAudio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Audio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Musique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Musique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Audio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#PaysOriginaire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#PaysOriginaire"/>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Personne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Personne"/>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Photographie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Photographie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Image"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Podcast -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Podcast">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Audio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Posters -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Posters">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Image"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Serie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Serie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Video"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Sujet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Sujet"/>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Texte -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Texte">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Document"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Video"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Video -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Video">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Langue1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Langue1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Langue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Musique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Musique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Musique"/>
+        <DocumentsNumeriques:aPourLangue rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Langue1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#lois -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#lois">
+        <rdf:type rdf:resource="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Personne"/>
+        <DocumentsNumeriques:aPourNomDArtiste>Lois</DocumentsNumeriques:aPourNomDArtiste>
+        <DocumentsNumeriques:aPourNomDArtiste>Marc</DocumentsNumeriques:aPourNomDArtiste>
+        <DocumentsNumeriques:aPourNomDArtiste>Samuel,Marc</DocumentsNumeriques:aPourNomDArtiste>
+        <DocumentsNumeriques:aPourNomDeNaissance>hwkshdkh</DocumentsNumeriques:aPourNomDeNaissance>
+        <DocumentsNumeriques:dateNaissance rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-21T00:00:00</DocumentsNumeriques:dateNaissance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#LivreAudio"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Musique"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#Podcast"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
