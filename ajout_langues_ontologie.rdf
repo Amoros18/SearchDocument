@@ -1,0 +1,402 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl"
+         xmlns="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl#">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/delllatitude5411/ontologies/DocumentsNumeriques.owl"/>
+
+<owl:ObjectProperty rdf:about="#aPourActeur">
+  <rdfs:domain rdf:resource="#Film"/>
+  <rdfs:range rdf:resource="#Personne"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#aPourGenre">
+  <rdfs:domain rdf:resource="#Musique"/>
+  <rdfs:range rdf:resource="#Genre"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#aPourMusiciens">
+  <rdfs:domain rdf:resource="#Musique"/>
+  <rdfs:range rdf:resource="#Personne"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#aPourNationalite">
+  <rdfs:domain rdf:resource="#Personne"/>
+  <rdfs:range rdf:resource="#Pays"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#aPourRealisateur">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Film"/>
+  <rdfs:range rdf:resource="#Personne"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#aPourType">
+  <rdfs:domain rdf:resource="#Document"/>
+  <rdfs:range rdf:resource="#TypeDocument"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#estLeClipDe">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#ClipMusical"/>
+  <rdfs:range rdf:resource="#Musique"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#estUneParticuliarite">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Document"/>
+  <rdfs:range rdf:resource="#Document"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#languePrincipale">
+  <rdfs:domain rdf:resource="#Document"/>
+  <rdfs:range rdf:resource="#Langue"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#biographie">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Personne"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#code_iso">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Langue"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#date_publication">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Document"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#description">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Genre"/>
+  <rdfs:domain rdf:resource="#Langue"/>
+  <rdfs:domain rdf:resource="#Pays"/>
+  <rdfs:domain rdf:resource="#Sujet"/>
+  <rdfs:domain rdf:resource="#TypeDocument"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#duree">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Musique"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#email">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Utilisateur"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#format_fichier">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Document"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#nom">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Genre"/>
+  <rdfs:domain rdf:resource="#Langue"/>
+  <rdfs:domain rdf:resource="#Pays"/>
+  <rdfs:domain rdf:resource="#Personne"/>
+  <rdfs:domain rdf:resource="#Sujet"/>
+  <rdfs:domain rdf:resource="#TypeDocument"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#password">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Utilisateur"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#resolution">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#ClipMusical"/>
+  <rdfs:domain rdf:resource="#Film"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#summary">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Document"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#titre">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Document"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#url">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Document"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#username">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Utilisateur"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Film">
+  <rdfs:subClassOf rdf:resource="#Video"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Personne"/>
+
+<owl:Class rdf:about="#Musique">
+  <rdfs:subClassOf rdf:resource="#Audio"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Musique"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Genre"/>
+
+<owl:Class rdf:about="#Pays"/>
+
+<owl:Class rdf:about="#Document"/>
+
+<owl:Class rdf:about="#TypeDocument"/>
+
+<owl:Class rdf:about="#ClipMusical">
+  <rdfs:subClassOf rdf:resource="#Video"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Langue"/>
+
+<owl:Class rdf:about="#Sujet"/>
+
+<owl:Class rdf:about="#Utilisateur"/>
+
+<owl:Class rdf:about="#Article">
+  <rdfs:subClassOf rdf:resource="#Texte"/>
+  <owl:disjointWith rdf:resource="#Livre"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Texte">
+  <rdfs:subClassOf rdf:resource="#Document"/>
+  <owl:disjointWith rdf:resource="#Video"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Livre">
+  <rdfs:subClassOf rdf:resource="#Texte"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Audio">
+  <rdfs:subClassOf rdf:resource="#Document"/>
+  <owl:disjointWith rdf:resource="#Image"/>
+  <owl:disjointWith rdf:resource="#Texte"/>
+  <owl:disjointWith rdf:resource="#Video"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Image">
+  <rdfs:subClassOf rdf:resource="#Document"/>
+  <owl:disjointWith rdf:resource="#Texte"/>
+  <owl:disjointWith rdf:resource="#Video"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Video">
+  <rdfs:subClassOf rdf:resource="#Document"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Documentaire">
+  <rdfs:subClassOf rdf:resource="#Video"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Illustration">
+  <rdfs:subClassOf rdf:resource="#Image"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LivreAudio">
+  <rdfs:subClassOf rdf:resource="#Audio"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Photographie">
+  <rdfs:subClassOf rdf:resource="#Image"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Podcast">
+  <rdfs:subClassOf rdf:resource="#Audio"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Posters">
+  <rdfs:subClassOf rdf:resource="#Image"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Serie">
+  <rdfs:subClassOf rdf:resource="#Video"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#Langue1">
+  <rdf:type rdf:resource="#Langue"/>
+  <nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Français</nom>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Langue parler en france / cameroun/...</description>
+  <code_iso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fr</code_iso>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#lois">
+  <rdf:type rdf:resource="#Personne"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Langue2">
+  <rdf:type rdf:resource="#Langue"/>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</description>
+  <nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anglais</nom>
+  <code_iso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</code_iso>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Genre1">
+  <rdf:type rdf:resource="#Genre"/>
+  <nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rap</nom>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rap - local</description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pays1">
+  <rdf:type rdf:resource="#Pays"/>
+  <nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cameroun</nom>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pays d'afrique centrale</description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pays2">
+  <rdf:type rdf:resource="#Pays"/>
+  <nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</nom>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pays d'europe</description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pays3">
+  <rdf:type rdf:resource="#Pays"/>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</description>
+  <nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amerique</nom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pays4">
+  <rdf:type rdf:resource="#Pays"/>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</description>
+  <nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tchad</nom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DocumentType1">
+  <rdf:type rdf:resource="#TypeDocument"/>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></description>
+  <nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Musique</nom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DocumentType2">
+  <rdf:type rdf:resource="#TypeDocument"/>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</description>
+  <nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Film</nom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Personne1">
+  <rdf:type rdf:resource="#Personne"/>
+  <aPourNationalite rdf:resource="#Pays1"/>
+  <aPourNationalite rdf:resource="#Pays2"/>
+  <biographie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eleve ingénieur</biographie>
+  <nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nouke Lois Amoros</nom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Personne2">
+  <rdf:type rdf:resource="#Personne"/>
+  <aPourNationalite rdf:resource="#Pays3"/>
+  <aPourNationalite rdf:resource="#Pays2"/>
+  <nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stephen King</nom>
+  <biographie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acteur</biographie>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Personne3">
+  <rdf:type rdf:resource="#Personne"/>
+  <aPourNationalite rdf:resource="#Pays3"/>
+  <aPourNationalite rdf:resource="#Pays2"/>
+  <biographie rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-</biographie>
+  <nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Franck Darobont</nom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Personne4">
+  <rdf:type rdf:resource="#Personne"/>
+  <aPourNationalite rdf:resource="#Pays1"/>
+  <biographie rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></biographie>
+  <nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John</nom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Document1">
+  <rdf:type rdf:resource="#Document"/>
+  <aPourType rdf:resource="#DocumentType1"/>
+  <languePrincipale rdf:resource="#Langue1"/>
+  <summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></summary>
+  <format_fichier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">.mp3</format_fichier>
+  <date_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-11-23T19:03:25.000+00:00</date_publication>
+  <titre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bella - Maitre Gims</titre>
+  <url rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.amazon.fr/dp/B00GS8611U/ref=sr_1_2?adgrpid=1351300724898659&amp;dib=eyJ2IjoiMSJ9.OMLYv7UVOVTjtoDR3nQRENV_3yWOscX8qTZoMK3wMk2zOxv-hCLC3p77aC0dfZG1nnX3QWmIMFhLK8GqnJsOqBGUOVRKe-H0OxJqDPtGPczx21L</url>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Document2">
+  <rdf:type rdf:resource="#Document"/>
+  <aPourType rdf:resource="#DocumentType2"/>
+  <languePrincipale rdf:resource="#Langue2"/>
+  <date_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1994-09-23T11:29:53.000+00:00</date_publication>
+  <summary rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Film interressant</summary>
+  <format_fichier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MKV</format_fichier>
+  <titre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Shawshank Redemption</titre>
+  <url rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://example.com/shawshank_redemption.mkv</url>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Musique1">
+  <rdf:type rdf:resource="#Musique"/>
+  <aPourGenre rdf:resource="#Genre1"/>
+  <estUneParticuliarite rdf:resource="#Document1"/>
+  <duree rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">221</duree>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Film1">
+  <rdf:type rdf:resource="#Film"/>
+  <aPourActeur rdf:resource="#Personne2"/>
+  <estUneParticuliarite rdf:resource="#Document2"/>
+  <aPourRealisateur rdf:resource="#Personne3"/>
+  <resolution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1080p</resolution>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Film2">
+  <rdf:type rdf:resource="#Film"/>
+  <aPourActeur rdf:resource="#Personne3"/>
+  <estUneParticuliarite rdf:resource="#Document1"/>
+  <aPourRealisateur rdf:resource="#Personne1"/>
+  <resolution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1080p</resolution>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ClipMusical1">
+  <rdf:type rdf:resource="#ClipMusical"/>
+  <estUneParticuliarite rdf:resource="#Document1"/>
+  <estLeClipDe rdf:resource="#Musique1"/>
+  <resolution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1080p</resolution>
+</owl:NamedIndividual>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#LivreAudio"/>
+    <rdf:Description rdf:about="#Musique"/>
+    <rdf:Description rdf:about="#Podcast"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#Illustration"/>
+    <rdf:Description rdf:about="#Photographie"/>
+    <rdf:Description rdf:about="#Posters"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+
+</rdf:RDF>

@@ -1,0 +1,9 @@
+{% if langues %}
+    <ul>
+    {% for langue in langues %}
+        <li><a href="/metadonne/{{ langue.id }}/">{{ langue.nom }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Pas de Langue Disponible.</p>
+{% endif %}

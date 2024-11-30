@@ -37,8 +37,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ajout.apps.AjoutConfig'
+    'django_elasticsearch_dsl',
+    'django_elasticsearch_dsl_drf',
+    'metadonne.apps.MetadonneConfig',
+    'user.apps.UserConfig',
+    'search.apps.SearchConfig',
 ]
+# ELASTICSEARCH_API_KEY = 'd1J1MWZKTUItSFNxQ2cyN2VCSks6clYteExKMkdSQ21CZWlvb2ctMFpWdw=='
+# ELASTICSEARCH_HOST = 'https://e5be385d840743949485093dd85dd5cf.us-central1.gcp.cloud.es.io:443'
+ELASTICSEARCH_DSL = {
+    'default': {
+        'hosts': 'https://e5be385d840743949485093dd85dd5cf.us-central1.gcp.cloud.es.io:443',
+        'api_key': 'd1J1MWZKTUItSFNxQ2cyN2VCSks6clYteExKMkdSQ21CZWlvb2ctMFpWdw=='
+    }
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -125,3 +137,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+

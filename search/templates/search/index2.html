@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- This link tag is used to link html file with css file -->
+    <link rel="stylesheet" href="index.css">
+    <title>Moteur</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: arial,sans-serif;
+        }
+
+        body{
+            width: 100%;
+        }
+
+        .navbar{
+            width: 100%;
+            height: 60px;
+            padding: 5px;
+            color: white;
+            float: right;
+            position: relative;
+        }
+
+        .navbar ul{
+            display: flex;
+            position: absolute;
+            right: 100px;
+            line-height: 30px;
+        }
+
+        .navbar ul li{
+            list-style: none;
+            margin: auto 0;
+            margin-right: 12px;
+        }
+
+        .navbar ul li a{
+            text-decoration: none;
+            color: black;
+            font-size: 12px;
+        }
+
+        .navbar ul li a:hover{
+            text-decoration: underline;
+        }
+
+        .navbar .images{
+            display: flex;
+            height: 30px;
+            float: right;
+            position: absolute;
+            right: 10px;
+        }
+
+        .navbar .images a{
+            margin-right: 15px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        .navbar .images a img{
+            display: block;
+            height: 30px;
+            margin: auto 0;
+            line-height: 60px;
+        }
+
+        .navbar .images a:nth-child(1) img{
+            height: 15px;
+            opacity: 0.6;
+        }
+
+        .google{
+            margin-top: 5px;
+            width: 100%;
+        }
+
+        .google img{
+            height: 83px;
+            line-height: 91px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .search{
+            width: 550px;
+            height: 45px;
+            display: block;
+            margin: 0 auto;
+            margin-top: 25px;
+        }
+
+        .search .input{
+            height: 45px;
+            position: relative;
+        }
+
+        .search .input input{
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+            height: 45px;
+            border-radius: 24px;
+            outline: none;
+            border: 1px solid #dfe1e5;
+            padding: 0 45px;
+            font-size: 15px;
+        }
+
+        .search .input input:hover{
+            box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .search .input .fa-search{
+            font-size: 15px;
+            position: absolute;
+            left: 17px;
+            top: 16px;
+            color: rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .search .input .fa-microphone{
+            font-size: 15px;
+            position: absolute;
+            right: 17px;
+            top: 16px;
+            color: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+
+        .buttons{
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .buttons button{
+            min-width: 54px;
+            height: 35px;
+            padding: 0 16px;
+            margin: 11px 4px;
+            border: none;
+            background: #f8f9fa;
+        }
+
+        .buttons button:hover{
+            color: #202124;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 10%);
+        }
+
+        .buttons button a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .resultat{
+            margin-top: 70px;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        .info{
+            width: 470px;
+            margin: 0 auto;
+            margin-top: 80px;
+            display: flex;
+            font-size: 12px;
+            line-height: 12px;
+        }
+
+        .info ul{
+            display: flex;
+            margin-left: 5px;
+        }
+
+        .info ul li{
+            list-style: none;
+            margin-right: 5px;
+        }
+
+        .info ul li a{
+            text-decoration: none;
+        }
+
+        .info ul li a:hover{
+            text-decoration: underline;
+        }
+        .content {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .active {
+            background-color: #4a1ca0;
+            color: rgb(12, 180, 12);
+        }
+        .buttons button {
+            margin: 5px;
+        }
+        .item_resultat {
+            background: linear-gradient(135deg, #f0f4c3, #c5e1a5); /* Dégradé de fond */
+            border: 1px solid #4caf50; /* Bordure verte */
+            border-radius: 8px; /* Coins arrondis */
+            padding: 20px; /* Espacement interne */
+            margin: 20px 0; /* Espacement externe */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre */
+            transition: transform 0.3s, box-shadow 0.3s; /* Effet de transition */
+        }
+
+        .item_resultat:hover {
+            transform: translateY(-5px); /* Légère élévation au survol */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée au survol */
+        }
+
+        .titre {
+            font-size: 1.5em; /* Taille de police pour le titre */
+            color: #2e7d32; /* Couleur du titre */
+            text-decoration: none; /* Pas de soulignement */
+            font-weight: bold; /* Met le titre en gras */
+        }
+
+        .titre:hover {
+            text-decoration: underline; /* Soulignement au survol */
+        }
+
+        p {
+            margin: 8px 0; /* Espacement entre les paragraphes */
+            color: #424242; /* Couleur du texte */
+        }
+
+        strong {
+            color: #388e3c; /* Couleur pour le texte en gras */
+        }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Connexion</a></li>
+            <li><a href="#">Inscription</a></li>
+        </ul>
+        <div class="images">
+            {% load static %}
+            <a href="#"><img src="{% static 'search/dots.png' %}" alt=""></a>
+            <a href="#"><img src="{% static 'search/initial.png' %}" alt=""></a>
+        </div>
+    </nav>
+    <div class="google">
+        <img src="{% static 'search/logo.png' %}" alt="">
+    </div>
+    <div class="search">
+        <div class="input">
+            <i class="fa fa-search"></i>
+            <form method="GET" action="">
+                <input type="text" name="q" placeholder="Rechercher..." value="{{q}}">
+            </form>
+            <i class="fa fa-microphone"></i>
+            <div class="buttons">
+                <button onclick="showContent('div1', this)">Tous</button>
+                <button onclick="showContent('div2', this)">Musique</button>
+                <button onclick="showContent('div3', this)">Film</button>
+                <button onclick="showContent('div4', this)">Clip Musicale</button>
+            </div>
+        </div>
+    </div>
+    <div class="resultat">
+        <div id="div1" class="content" style="display: block;">
+            {% for document in documents %}
+                <div class="item_resultat">
+                    <a class="titre" href="{{document.url}}">{{document.titre}}</a>
+                    <p>{{document.summary}}</p>
+                    <p><strong>Date de publication :</strong> {{ document.date_publication }}</p>
+                    <p><strong>Description :</strong> {{ document.duree }}</p>
+                    <p><strong>Langue :</strong> {{ document.langue }}</p>
+                </div>
+            {% empty %}
+                <li>Aucun résultat trouvé.</li>
+            {% endfor %}
+        </div>
+        <div id="div2" class="content">
+            {% for document in musiques %}
+                <div class="item_resultat">
+                    <a class="titre" href="{{document.url}}">{{document.titre}}</a>
+                    <p>{{document.summary}}</p>
+                    <p><strong>Genre :</strong> {{ document.genre }}</p>
+                    <p><strong>Musiciens :</strong> {{ document.musiciens }}</p>
+                    <p><strong>Langue :</strong> {{ document.langue }}</p>
+                </div>
+            {% empty %}
+                <li>Aucun résultat trouvé.</li>
+            {% endfor %}
+        </div>
+        <div id="div3" class="content">
+            {% for document in films %}
+                <div class="item_resultat">
+                    <a class="titre" href="{{document.url}}">{{document.titre}}</a>
+                    <p>{{document.summary}}</p>
+                    <p><strong>Acteurs :</strong> {{ document.acteurs }}</p>
+                    <p><strong>Duree :</strong> {{ document.duree }}</p>
+                    <p><strong>Langue :</strong> {{ document.langue }}</p>
+                </div>
+            {% empty %}
+                <li>Aucun résultat trouvé.</li>
+            {% endfor %}
+        </div>
+        <div id="div4" class="content">
+            {% for document in clipMusicaux %}
+                <div class="item_resultat">
+                    <a class="titre" href="{{document.url}}">{{document.titre}}</a>
+                    <p>{{document.summary}}</p>
+                    <p><strong>Genre :</strong> {{ document.genre }}</p>
+                    <p><strong>Resolution :</strong> {{ document.resolution }}</p>
+                    <p><strong>Langue :</strong> {{ document.langue }}</p>
+                </div>
+            {% empty %}
+                <li>Aucun résultat trouvé.</li>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="info">
+        <p>Une production de Amoros : </p>
+        <ul>
+            <li><a href="#">Developpeur Web</a></li>
+        </ul>
+    </div>
+
+
+    <script>
+        function showContent(divId, button) {
+            // Cacher tous les divs
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+        
+            // Afficher le div sélectionné
+            const selectedDiv = document.getElementById(divId);
+            selectedDiv.style.display = 'block';
+        
+            // Retirer la classe active de tous les boutons et l'ajouter au bouton cliqué
+            const buttons = document.querySelectorAll('.buttons button');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            button.classList.add('active');
+        }
+    </script>
+</body>
+</html>
