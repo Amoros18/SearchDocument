@@ -64,7 +64,7 @@ class Document(models.Model):
 
 
 class Musique(models.Model):
-    musiciens = models.ManyToManyRel(Personne,'musique')
+    musiciens = models.ManyToManyField(Personne,'musique')
     genre = models.ManyToManyField(Genre ,'musique_genre')
     document = models.ForeignKey(Document,on_delete=models.CASCADE)
     duree = models.IntegerField(blank=True, null = True)

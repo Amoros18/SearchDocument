@@ -1,6 +1,6 @@
 from django_elasticsearch_dsl import Document, fields
 from django_elasticsearch_dsl.registries import registry
-from metadonne.models import Film as ModelMusique
+from metadonne.models import ClipMusicale as ModelClipMusical
 
 @registry.register_document
 class SearchClipMusical(Document):
@@ -20,8 +20,8 @@ class SearchClipMusical(Document):
         name = 'musique'
 
     class Django:
-        model = ModelMusique
-        queryset = ModelMusique.objects.all() 
+        model = ModelClipMusical
+        queryset = ModelClipMusical.objects.all() 
 
     def prepare_titre(self, instance):
         return instance.document.titre if instance.document else None
@@ -46,6 +46,7 @@ class SearchClipMusical(Document):
     
     def prepare_genre(self, instance):
         return " | ".join(instance.musique.genre.values_list('nom',flat = True))
+    
     def prepare_resolution(self, instance):
         return instance.resolution
     

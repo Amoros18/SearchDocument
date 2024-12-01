@@ -22,7 +22,6 @@ def search(request):
         clipMusicaux = SearchClipMusical.search()
 
     tous_contenus = []
-
     for musique in musiques:
         tous_contenus.append({"type": "Musique", **musique})
 
@@ -32,5 +31,5 @@ def search(request):
     for clip in clipMusicaux:
         tous_contenus.append({"type": "Clip Musical", **clip})
 
-    print(tous_contenus)
+    # print(tous_contenus)
     return render(request, 'search/index2.html', {'documents': tous_contenus, 'q' :query, 'musiques':musiques, 'films': films, 'clipMusicaux': clipMusicaux})

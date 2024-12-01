@@ -43,12 +43,19 @@ INSTALLED_APPS = [
     'user.apps.UserConfig',
     'search.apps.SearchConfig',
 ]
-# ELASTICSEARCH_API_KEY = 'd1J1MWZKTUItSFNxQ2cyN2VCSks6clYteExKMkdSQ21CZWlvb2ctMFpWdw=='
-# ELASTICSEARCH_HOST = 'https://e5be385d840743949485093dd85dd5cf.us-central1.gcp.cloud.es.io:443'
+import environ
+
+# Initialiser django-environ
+env = environ.Env()
+environ.Env.read_env()
+
+# Charger la clé d'API
+# API_KEY = env('API_KEY')
+
 ELASTICSEARCH_DSL = {
     'default': {
-        'hosts': 'https://e5be385d840743949485093dd85dd5cf.us-central1.gcp.cloud.es.io:443',
-        'api_key': 'd1J1MWZKTUItSFNxQ2cyN2VCSks6clYteExKMkdSQ21CZWlvb2ctMFpWdw=='
+        'hosts': env('HOST'),
+        'api_key': env('API_KEY')
     }
 }
 

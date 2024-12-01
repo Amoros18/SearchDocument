@@ -278,7 +278,7 @@
             {% for document in documents %}
                 <div class="item_resultat">
                     <a class="titre" href="{{document.url}}">{{document.titre}}</a>
-                    <p>{{document.summary}}</p>
+                    <p class="summary">{{document.summary}}</p>
                     <p><strong>Date de publication :</strong> {{ document.date_publication }}</p>
                     <p><strong>Description :</strong> {{ document.duree }}</p>
                     <p><strong>Langue :</strong> {{ document.langue }}</p>
@@ -336,6 +336,20 @@
 
 
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const summaries = document.querySelectorAll('.summary'); // Sélectionne toutes les balises p avec la classe summary
+            const maxWords = 30; // Limite de mots
+
+            summaries.forEach(summary => {
+                const text = summary.textContent;
+                const words = text.split(' ');
+
+                if (words.length > maxWords) {
+                    const truncatedText = words.slice(0, maxWords).join(' ') + '...';
+                    summary.textContent = truncatedText;
+                }
+            });
+        });
         function showContent(divId, button) {
             // Cacher tous les divs
             const contents = document.querySelectorAll('.content');
